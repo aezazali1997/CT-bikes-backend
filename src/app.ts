@@ -43,11 +43,11 @@ class App {
     public app: Application;
 
     constructor() {
-        this.app = express();
-        this.config();
-        this.routes();
-        this.initStorage();
-        this.seeding();
+      this.app = express();
+      this.config();
+      this.routes();
+      // this.initStorage();
+      this.seeding();
     }
 
     private config(): void {
