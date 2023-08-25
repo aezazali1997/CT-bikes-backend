@@ -1,11 +1,8 @@
 import http from 'http';
 import app from './app';
-import {
-    PORT
-} from './config/index';
-
-
-
+import { config } from 'dotenv'
+config();
+const PORT = process.env.PORT
 const server = http.createServer(app);
 
 async function startServer() {
