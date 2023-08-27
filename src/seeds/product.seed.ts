@@ -961,17 +961,14 @@ let productSeeds = [
 console.log(productSeeds.length)
 const  importData = async () => {
     try {
-        connectDB();
-        console.log("Deleting old product collection....")
-       await productModel.deleteMany({});
-       console.log("Inserting data into product collection...")
-       await productModel.insertMany(productSeeds);
-       console.log("data Inserted into product collection...")
-        
+      console.log("Deleting old product collection....");
+      await productModel.deleteMany({});
+      console.log("Inserting data into product collection...");
+      await productModel.insertMany(productSeeds);
+      console.log("data Inserted into product collection...");
     } catch (error) {
-        console.log("error while inserting data")
-        console.log(error);
-        
+      console.log("error while inserting data");
+      console.log(error);
     }
 }
 
