@@ -47,7 +47,7 @@ class App {
       this.config();
       this.routes();
       // this.initStorage();
-      //   this.seeding();
+        this.seeding();
     }
 
     private config(): void {
@@ -120,15 +120,15 @@ class App {
     }
 
     private async seeding(): Promise<void> {
-
-        // await initAdmin();
-        //  await initCategory();
-        // await initAppstore();
-        //  await initAboutus();
-        //await  initReturnPolicy();
-        // await  initOrderTracking();
-        //  await initCountries();
-        console.log("SEEDING DONE!...");
+        connectDB()
+      // await initAdmin();
+      //  await initCategory();
+      // await initAppstore();
+      //  await initAboutus();
+      //await  initReturnPolicy();
+      // await  initOrderTracking();
+      //  await initCountries();
+      console.log("SEEDING DONE!...");
     }
 
     private initStorage(): void {
