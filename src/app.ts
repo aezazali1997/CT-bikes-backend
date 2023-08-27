@@ -45,9 +45,9 @@ class App {
     constructor() {
       this.app = express();
       this.config();
-      this.seeding();
       this.routes();
       // this.initStorage();
+      this.seeding();
     }
 
     private config(): void {
@@ -129,7 +129,6 @@ class App {
         // await  initOrderTracking();
         //  await initCountries();
         console.log("SEEDING DONE!...");
-        connectDB(this.app)
     }
 
     private initStorage(): void {
