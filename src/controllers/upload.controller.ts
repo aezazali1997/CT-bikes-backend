@@ -112,7 +112,7 @@ class UploadController {
                 return next(new HttpException(HttpCode.NOT_FOUND, HttpMessage.NOT_FOUND));
             }
 
-            const image = product.images[imageIndex];
+            const image: any = product.images[imageIndex];
             const fileName = path.basename(image.url);
             const imagePath = path.join(filesDir, fileName);
 
@@ -167,7 +167,7 @@ class UploadController {
 
             // delete old image from server
 
-            const image = product.main_image;
+            const image:any = product.main_image;
             const fileName = path.basename(image.url);
             const imagePath = path.join(filesDir, fileName);
 
