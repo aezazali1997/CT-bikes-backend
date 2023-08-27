@@ -50,18 +50,17 @@ export default class ReviewService {
         })
             .limit(pageSize)
             .skip(pageSize * (page - 1))
-        let newAllProducts = allProducts.map((product) => {
-            let newProduct: any = {};
-            newProduct.image = product.main_image.url
-            newProduct.title = product.title
-            product.reviews.forEach((review: any) => {
-                newProduct.customer = review.username
-                newProduct.rating = review.rating
-                newProduct.date = review.createdAt
-            })
-            return newProduct
-
-        })
+        let newAllProducts = allProducts.map((product: any) => {
+          let newProduct: any = {};
+          newProduct.image = product.main_image.url;
+          newProduct.title = product.title;
+          product.reviews.forEach((review: any) => {
+            newProduct.customer = review.username;
+            newProduct.rating = review.rating;
+            newProduct.date = review.createdAt;
+          });
+          return newProduct;
+        });
         return newAllProducts;
 
     }
