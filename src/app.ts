@@ -47,7 +47,7 @@ class App {
       this.config();
       this.routes();
       // this.initStorage();
-      this.seeding();
+      //   this.seeding();
     }
 
     private config(): void {
