@@ -121,7 +121,6 @@ class App {
 
     private async seeding(): Promise<void> {
 
-        await connectDB();
         // await initAdmin();
         //  await initCategory();
         // await initAppstore();
